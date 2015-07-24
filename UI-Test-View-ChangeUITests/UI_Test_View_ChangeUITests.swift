@@ -17,12 +17,16 @@ class UI_Test_View_ChangeUITests: XCTestCase {
         XCUIApplication().launch()
     }
 
-    func testTipLabelChangesAfterTimeout() {
+    func testButtonChangesAfterTimeout() {
         let app = XCUIApplication()
+
         let expectedText = "Now you can press me"
         let identifier = "lunatic button"
-        self.expectationForPredicate(NSPredicate(format: "label BEGINSWITH '\(expectedText)'"),
-            evaluatedWithObject: app.buttons.elementMatchingType(XCUIElementType.Button, identifier: identifier), handler: nil)
+
+        let testPredicate = NSPredicate(format: "label = '\(expectedText)'")
+        let object = app.buttons.elementMatchingType(XCUIElementType.Button, identifier: identifier)
+
+        self.expectationForPredicate(testPredicate, evaluatedWithObject: object, handler: nil)
         self.waitForExpectationsWithTimeout(10, handler: nil)
     }
     
