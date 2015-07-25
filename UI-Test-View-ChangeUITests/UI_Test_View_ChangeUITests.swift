@@ -30,4 +30,20 @@ class UI_Test_View_ChangeUITests: XCTestCase {
     self.waitForExpectationsWithTimeout(10, handler: nil)
   }
 
+  func testOtherButtonChangesFooter() {
+    let app = XCUIApplication()
+
+    let expectedText = "Oh! Did something happen?!"
+    let labelIdentifier = "footer label"
+
+    let testPredicate = NSPredicate(format: "label = '\(expectedText)'")
+    let object = app.staticTexts.elementMatchingType(.Any, identifier: labelIdentifier)
+
+    self.expectationForPredicate(testPredicate, evaluatedWithObject: object, handler: nil)
+
+    app.buttons["Press me and I'll do something, eventually"].tap()
+
+    self.waitForExpectationsWithTimeout(10, handler: nil)
+  }
+
 }

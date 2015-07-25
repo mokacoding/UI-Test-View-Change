@@ -27,17 +27,42 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JH9-zG-qKo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEf-Fy-vIE">
+                                <rect key="frame" x="35" y="382" width="530" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="otherButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0G-ti-hn1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm just a little footer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZ5-bB-6wy">
+                                <rect key="frame" x="20" y="559" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="42R-OT-uI3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xfn-Pf-syb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="3Lh-7g-07n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SZ5-bB-6wy" secondAttribute="trailing" id="PdE-K4-Baz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xfn-Pf-syb" secondAttribute="trailing" constant="15" id="VMC-rl-EBJ"/>
+                            <constraint firstItem="bEf-Fy-vIE" firstAttribute="top" secondItem="xfn-Pf-syb" secondAttribute="bottom" constant="32" id="cSS-ai-A9O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bEf-Fy-vIE" secondAttribute="trailing" constant="15" id="dH0-Sy-THa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SZ5-bB-6wy" secondAttribute="bottom" constant="20" id="eG0-6v-agN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bEf-Fy-vIE" secondAttribute="bottom" constant="188" id="iXO-ze-ygH"/>
+                            <constraint firstItem="SZ5-bB-6wy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="itR-PF-2P4"/>
+                            <constraint firstItem="bEf-Fy-vIE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="mdo-Q4-C9O"/>
                             <constraint firstItem="xfn-Pf-syb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qf5-n9-fDC"/>
                             <constraint firstItem="xfn-Pf-syb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rMk-FG-4V1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="xfn-Pf-syb" id="u8z-0G-NZU"/>
+                        <outlet property="footerLabel" destination="SZ5-bB-6wy" id="uJu-Fi-Use"/>
+                        <outlet property="otherButton" destination="bEf-Fy-vIE" id="J5H-M0-kDX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
